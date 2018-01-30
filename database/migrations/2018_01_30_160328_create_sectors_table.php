@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSectorsTable extends Migration
 {
-    //
+    // Tabela de setores.
     public function up()
     {
         Schema::create('sectors', function (Blueprint $table) {

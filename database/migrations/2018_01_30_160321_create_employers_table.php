@@ -6,17 +6,16 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateEmployersTable extends Migration
 {
-    //
+    // Tabela de empregados.
     public function up()
     {
-        Schema::create('employers', function (Blueprint $table) {
+        Schema::create('employers', function (Blueprint $table){
             $table->increments('id');
             $table->integer('register')->unique();
             $table->string('name');
         });
     }
 
-    //
     public function down()
     {
         Schema::dropIfExists('employers');

@@ -2,6 +2,7 @@
 
 namespace App\Estoque;
 
+use App\Estoque\Product;
 use Illuminate\Database\Eloquent\Model;
 
 class Fornecedor extends Model
@@ -19,9 +20,9 @@ class Fornecedor extends Model
     // Indica quais colunas não podem ser atribuídas em massa.
     protected $guarded = ['name', 'estado'];
     // Método para retornar os produtos entregues pelo fornecedor.
-    public function products() {
+    public function produtos() {
       // Produtos do fornecedor.  
-      return $this->hasMany('App\Estoque\Product', 'provider', 'name');
+      return $this->hasMany('Product', 'provider', 'name');
     }
 
     // Lista o nome de todos os fornecedores.

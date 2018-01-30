@@ -2,6 +2,7 @@
 
 namespace App\Estoque;
 
+use App\Estoque\Fornecedor;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -13,6 +14,6 @@ class Product extends Model
     // Método que retorna de que fornecedor é o produto.
     public function fornecedor() {
       // Fornecedor do produto.
-      return $this->belongsTo('App\Estoque\Fornecedor', 'provider', 'name');
+      return $this->belongsTo('Fornecedor', 'provider', 'name');
     }
 }
