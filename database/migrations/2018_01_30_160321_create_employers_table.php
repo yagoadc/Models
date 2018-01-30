@@ -12,7 +12,7 @@ class CreateEmployersTable extends Migration
         Schema::create('employers', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('register')->unique();
-            $table->string('name');W
+            $table->string('name');
         });
     }
 
