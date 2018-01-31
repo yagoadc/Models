@@ -27,7 +27,7 @@ class Fornecedor extends Model
 
     // Lista o nome de todos os fornecedores.
     public static function lista() {
-
+        // Retorna a lista de nomes dos fornecedores como um array.
         return static::pluck('name')->toArray();
 
     }

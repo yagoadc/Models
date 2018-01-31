@@ -11,6 +11,9 @@ class Product extends Model
     public $timestamps = false;
     // Indica quais colunas podem ser atribuidas em massa.
     protected $fillable = ['code', 'name', 'category', 'provider'];
+    // Colunas que são ocultadas para array ou json.
+    protected $hidden = ['code'];
+
     // Método que retorna de que fornecedor é o produto.
     public function fornecedor() {
       // Fornecedor do produto.
